@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class LoginUI extends StatefulWidget {
   const LoginUI({Key? key}) : super(key: key);
@@ -158,7 +157,132 @@ class _LoginUIState extends State<LoginUI> {
                     ),
                   ),
                   obscureText: true,
-
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 40),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: TextButton(
+                        onPressed: (){},
+                        child: Text(
+                          'ลงทะเบียน',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontFamily: 'Kanit',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black
+                          ),
+                        ),
+                        style: TextButton.styleFrom(
+                          alignment: Alignment.centerLeft
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: TextButton(
+                        onPressed: (){},
+                        child: Text(
+                          'ลืมรหัสผ่าน',
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontFamily: 'Kanit',
+                              fontWeight: FontWeight.bold,
+                              color: Colors.red
+                          ),
+                        ),
+                        style: TextButton.styleFrom(
+                            alignment: Alignment.centerRight
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 40, left: 40),
+                child: OutlinedButton(
+                  onPressed: (){},
+                  child: Text(
+                    'เข้าสู่ระบบ',
+                    style: TextStyle(
+                      fontFamily: 'Kanit',
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  style: OutlinedButton.styleFrom(
+                    fixedSize: Size(
+                      MediaQuery.of(context).size.width,
+                      50,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    side: BorderSide(
+                      color: Colors.blue
+                    )
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 40, right: 40, top: 10),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        height: 1,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15, right: 15),
+                      child: Text(
+                        'หรือ',
+                        style: TextStyle(
+                          fontFamily: 'Kanit',
+                          color: Colors.grey
+                        ),
+                      ),
+                    ),
+                    Expanded(
+          child: Container(
+            height: 1,
+            color: Colors.grey,
+          ),
+        ),
+                  ],
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
+              Padding(
+                padding: const EdgeInsets.only(right: 40, left: 40),
+                child: OutlinedButton(
+                  onPressed: (){},
+                  child: Text(
+                    'Facebook',
+                    style: TextStyle(
+                      fontFamily: 'Kanit',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Colors.white
+                    ),
+                  ),
+                  style: OutlinedButton.styleFrom(
+                      fixedSize: Size(
+                        MediaQuery.of(context).size.width,
+                        50,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      side: BorderSide(
+                          color: Colors.blue
+                      ),
+                      backgroundColor: Color(0xff3333CC),
+                  ),
                 ),
               ),
             ],
