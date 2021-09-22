@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginUI extends StatefulWidget {
   const LoginUI({Key? key}) : super(key: key);
@@ -11,12 +12,11 @@ class _LoginUIState extends State<LoginUI> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
-              SizedBox(height: MediaQuery.of(context).size.height * 0.04,),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.05,),
               Image.asset(
                 'assets/images/MicrosoftTeams-image.png',
                 width: MediaQuery.of(context).size.width * 0.5,
@@ -80,7 +80,7 @@ class _LoginUIState extends State<LoginUI> {
                   color: Colors.grey[700]
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.05,),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.03,),
               Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40),
                 child: TextField(
@@ -159,7 +159,7 @@ class _LoginUIState extends State<LoginUI> {
                   obscureText: true,
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.001,),
               Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40),
                 child: Row(
@@ -257,34 +257,145 @@ class _LoginUIState extends State<LoginUI> {
                 ),
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
-              Padding(
-                padding: const EdgeInsets.only(right: 40, left: 40),
-                child: OutlinedButton(
-                  onPressed: (){},
-                  child: Text(
-                    'Facebook',
-                    style: TextStyle(
-                      fontFamily: 'Kanit',
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: Colors.white
-                    ),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                      fixedSize: Size(
-                        MediaQuery.of(context).size.width,
-                        50,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      side: BorderSide(
-                          color: Colors.blue
-                      ),
-                      backgroundColor: Color(0xff3333CC),
+              ElevatedButton.icon(
+                onPressed: (){},
+                icon: Icon(
+                  FontAwesomeIcons.facebookF
+                ),
+                label: Text(
+                  'Facebook',
+                  style: TextStyle(
+                    fontFamily: 'Kanit',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
+                style: ElevatedButton.styleFrom(
+                  primary: Color(0xff1877f2),
+                  fixedSize: Size(
+                    MediaQuery.of(context).size.width - 80,
+                    50
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)
+                  )
+                ),
               ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
+              ElevatedButton.icon(
+                onPressed: (){},
+                icon: Icon(
+                    FontAwesomeIcons.googlePlusG
+                ),
+                label: Text(
+                  '  Google',
+                  style: TextStyle(
+                    fontFamily: 'Kanit',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                    primary: Color(0xffdb4a39),
+                    fixedSize: Size(
+                        MediaQuery.of(context).size.width - 80,
+                        50
+                    ),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)
+                    )
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.015,),
+              ElevatedButton.icon(
+                onPressed: (){},
+                icon: Icon(
+                    FontAwesomeIcons.apple
+                ),
+                label: Text(
+                  'Apple ID',
+                  style: TextStyle(
+                    fontFamily: 'Kanit',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                    primary: Color(0xff333333),
+                    fixedSize: Size(
+                        MediaQuery.of(context).size.width - 80,
+                        50
+                    ),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)
+                    )
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.03,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  OutlinedButton(
+                    onPressed: (){},
+                    child: Icon(
+                      FontAwesomeIcons.instagram,
+                      color: Color(0xffc32aa3),
+                      size: 30,
+                    ),
+                    style: OutlinedButton.styleFrom(
+                      fixedSize: Size(
+                        65,
+                        65
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(65),
+                      ),
+                      side: BorderSide(
+                        color: Color(0xffc32aa3)
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+                  ElevatedButton(
+                    onPressed: (){},
+                    child: Icon(
+                      FontAwesomeIcons.twitter
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: Size(
+                          65,
+                          65
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(65)
+                      ),
+                      primary: Color(0xff00aced),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+                  OutlinedButton(
+                    onPressed: (){},
+                    child: Icon(
+                      FontAwesomeIcons.linkedin,
+                      color: Color(0xff0a66c2),
+                      size: 30,
+                    ),
+                    style: OutlinedButton.styleFrom(
+                      fixedSize: Size(
+                          65,
+                          65
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(65),
+                      ),
+                      side: BorderSide(
+                          color: Color(0xff0a66c2)
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.05,),
             ],
           ),
         ),
